@@ -1,0 +1,43 @@
+﻿/// <reference path="../style.scss" />
+ul.menu {
+    position: fixed;
+    top: 72px;
+    right: 0;
+    background: #212d43;
+    z-index: 9;
+    width: 200px;
+    display: none;
+    transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+
+    &.open {
+        display: block;
+    }
+
+    > li {
+        display: block;
+        vertical-align: middle;
+        line-height: normal;
+        cursor: pointer;
+        color: #fff;
+
+        a {
+            color: #fff;
+            padding: 10px 10px;
+            font-size: 15px;
+            border-bottom: 1px solid lighten(#212d43, 10%);
+            display:block;
+            transition:background 0.5s ease-in-out;
+
+            &:hover {
+                text-decoration: none;
+                background: lighten(#212d43, 10%);
+            }
+        }
+    }
+
+    * {
+        -webkit-transition: border 500ms ease-out;
+        -moz-transition: border 500ms ease-out;
+        -o-transition: border 500ms ease-out;
+    }
+}

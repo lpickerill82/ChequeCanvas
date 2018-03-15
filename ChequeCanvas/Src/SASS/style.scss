@@ -1,0 +1,38 @@
+//----------------------------------*\
+// Base
+//----------------------------------*/
+
+@import 'base/_reset.scss';
+@import 'base/_colors.scss';
+@import 'base/_defaults.scss'; 
+@import 'base/_icons.scss';
+@import 'base/_font.scss';
+@import 'base/_mediaQueries.scss';
+
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+
+
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+
+// Config modules
+//@import 'components/_vars.scss';
+
+@import 'components/_button.scss';
+@import 'components/_modal.scss';
+@import 'components/_navigation.scss';
+@import 'components/_chequeCanvas.scss';
+@import 'components/_typography.scss';
+
+
+
+
+
+// Config Partial
+@import 'partial/_header.scss';
+@import 'partial/_footer.scss';
+@import 'partial/_feature.scss';
+

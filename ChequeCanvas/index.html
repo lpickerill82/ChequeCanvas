@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <LINK href="Content/Css/style.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="Content/Css/chosen.bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Cheque Canvas</h1>
+                <p>A cheque Label Feature allowing you to move the label into position ready for printing out on a A4 pre cheque printout</p>
+               
+            </div>
+            <div class="col-md-12" style="padding-top:20px;">  
+                <button type="button" class="btn btn-primary" data-target="#ChequeGenerator" data-toggle="modal">Cheque Label Placement</button>
+            </div>
+        </div>
+
+            <div id="ChequeGenerator" class="modal fade  modal-fullwidth" role="dialog">
+                <div class="modal-dialog modal-fw">
+                    <div class="modal-content modal-content-full">
+                        <div class="modal-header modal-header-full">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-10 col-sm-8 col-lg-11">
+                                        <h2>Full Modal Template</h2>
+                                    </div>
+                                    <div class="col-xs-1 col-sm-1 col-lg-1 close-modal pull-right" style="text-align:right; padding-right:0; margin-top:-15px;">
+                                        <button id="btn-close-toggle" class="btn btn-icon-only btn-close pull-right" type="button" data-dismiss="modal"><i class="fa fa-times "></i></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body modal-body-full">
+                            <div class="modal-body-content">
+                                <div class="summary">
+                                    <div class="container-fluid">
+                                    </div>
+                                </div>
+                                <div class="cheque-generator">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-4 col-sm-lg-12">
+                                                <div class="cheque-generator-control ">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 col-lg-12 col-sm-lg-6 padding-0-full">
+                                                            <div id="fieldSelectorController" class="field-control cheque-control col-sm-12 col-lg-6">
+                                                            </div>
+                                                            <div id="nudgerController" class="nudger-control-wrap col-sm-12 col-lg-6">
+                                                                <div class="nudger-control cheque-control ">
+                                                                    <button id="BtnNudgeUp" type="button" class="btn btn-primary btn-icon btn-tooltip btn-nudge btn-nudge-up" data-title="Nudge Up" data-direction="Up" disabled><i class="fa fa-caret-up"></i></button>
+                                                                    <button id="BtnNudgeLeft" type="button" class="btn btn-primary btn-icon btn-tooltip btn-nudge btn-nudge-left" data-title="Nudge Left" data-direction="Left" disabled><i class="fa fa-caret-left"></i></button>
+                                                                    <button id="BtnNudgeRight" type="button" class="btn btn-primary btn-icon btn-tooltip btn-nudge btn-nudge-right" data-title="Nudge Right" data-direction="Right" disabled><i class="fa fa-caret-right"></i></button>
+                                                                    <button id="BtnNudgeDown" type="button" class="btn btn-primary btn-icon btn-tooltip btn-nudge btn-nudge-down" data-title="Nudge Down" data-direction="Down" disabled><i class="fa fa-caret-down"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="label-details coordinates-input-control col-sm-6 col-lg-12 col-sm-lg-6 ">
+                                                            <ul id="labelDetailsChequeNudgingList" class="label-details-list"></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-lg-8 ">
+                                                <div class="cheque-layout">
+                                                    <div class="grid-layout"></div>
+                                                    <span id="PayeeName" class="cheque-placeholder"></span>
+                                                    <span id="SumInWord" class="cheque-placeholder"></span>
+                                                    <span id="SumInNumber" class="cheque-placeholder"></span>
+                                                    <span id="DateOfCheque" class="cheque-placeholder"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Panel Table -->
+                            </div>
+                        </div>
+                        <div class="modal-footer modal-footer-full">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-3 col-sm-4 col-lg-4 pull-left">
+                                        <button type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Close</button>
+
+                                    </div>
+                                    <div class="col-xs-3 col-sm-4 col-lg-8 pull-right" style="text-align:right;">
+
+                                        <button id="btnSavedClose" type="button" class="btn btn-primary pull-right">Save and Close</button>
+
+                                        <button id="btnResetToDefault" type="button" class="btn btn-secondary btn-with-icon pull-right"><i class="fa fa-undo"></i> Reset to Default</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>
+
+<script src="Scripts/chosen.jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+
+

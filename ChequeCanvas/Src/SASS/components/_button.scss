@@ -1,0 +1,81 @@
+/// <reference path="../style.scss" />
+.btn {
+    height: 32px;
+    padding: 0 10px;
+    line-height: normal;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 0;
+    min-width: 100px;
+
+
+    &:focus,
+    &:active {
+        box-shadow: none;
+    }
+
+
+    .fa {
+        font-size: 16px;
+        color: #fff;
+        margin-right: 8px;
+    }
+
+    &.btn-icon {
+        text-align: center;
+
+        .fa {
+            margin-right: 0;
+        }
+    }
+
+
+    &:empty {
+        padding: 0;
+        width: 32px;
+    }
+
+    &.btn-primary {
+        background: $blue-color;
+        color: #fff;
+        border: 1px solid $blue-color;
+        border-color: darken($blue-color, 10%);
+    }
+
+    &.btn-secondary {
+        background: $light-grey-color;
+        color: #333;
+        border: 1px solid $light-grey-color;
+        border-color: darken($light-grey-color, 10%);
+
+        i {
+            color: #333;
+        }
+    }
+
+    &.icon-search {
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:before {
+            content: none;
+        }
+    }
+
+    &.btn-large {
+        height: 43px;
+        line-height: 43px;
+    }
+
+    &.btn-icon-only {
+        color: #333;
+        background: transparent;
+        min-width:32px;
+        width:32px;
+        i {
+            color:#333;
+        }
+    }
+}

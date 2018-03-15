@@ -1,0 +1,73 @@
+﻿/// <reference path="../style.scss" />
+$blue-color: #005bc4;
+$orange-color: #ef672f;
+$light-blue-color: #30c4c8;
+$dark-blue-color: #212d43;
+$light-green-color: #005bc4;
+$lime-green-color: #88c100;
+$yellow-color: #ffb50a;
+$purple-color: #4f295a;
+$pink-color: #d90f5b;
+$light-grey-color:#eaeaea;
+
+
+.blue-color {
+    color:$blue-color;
+}
+.dark-blue-color-bg {
+    background-color: $dark-blue-color;
+
+    &:hover {
+        background-color:lighten($dark-blue-color, 10%);
+        
+    }
+}
+.light-blue-color-bg {
+    background-color: $light-blue-color;
+
+    &:hover {
+        background-color: lighten($light-blue-color, 10%);
+    }
+}
+.light-green-color-bg {
+    background-color: $light-green-color;
+
+    &:hover {
+        background-color: lighten($light-green-color, 10%);
+    }
+}
+.lime-green-color-bg {
+    background-color: $lime-green-color;
+
+    &:hover {
+        background-color: lighten($lime-green-color, 10%);
+    }
+}
+.pink-color-bg {
+    background-color: $pink-color;
+
+    &:hover {
+        background-color: lighten($pink-color, 10%);
+    }
+}
+.purple-color-bg {
+    background-color: $purple-color;
+
+    &:hover {
+        background-color: lighten($purple-color, 10%);
+    }
+}
+.orange-color-bg {
+    background-color: $orange-color;
+
+    &:hover {
+        background-color: lighten($orange-color, 10%);
+    }
+}
+.yellow-color-bg {
+    background-color: $yellow-color;
+
+    &:hover {
+        background-color: lighten($yellow-color, 10%);
+    }
+}

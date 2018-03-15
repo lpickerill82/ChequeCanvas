@@ -1,0 +1,9 @@
+﻿/// <reference path="../style.scss" />
+* {
+    -webkit-transition: background 500ms ease-in-out, color 0.5s ease-in-out;
+    -moz-transition: background 500ms ease-in-out, color 0.5s ease-in-out;
+    -o-transition: background 500ms ease-in-out, color 0.5s ease-in-out;
+}
+body {
+    padding:20px 0;  
+} 

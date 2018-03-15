@@ -1,0 +1,9 @@
+/// <reference path="../style.scss" />
+
+h1 + p {
+    padding-top:10px;
+
+    &:last-child {
+        padding-bottom:10px;
+    }
+}
