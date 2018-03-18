@@ -62,6 +62,7 @@
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\style.min.css" />
     <Content Include="gulpfile.js" />
+    <Content Include="Scripts\chosen.jquery.js" />
     <Content Include="Src\SASS\base\_colors.scss" />
     <Content Include="Src\SASS\base\_defaults.scss" />
     <Content Include="Src\SASS\base\_font.scss" />
